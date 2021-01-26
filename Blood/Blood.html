@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood</title>
+
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="design.css">
+  	<script type="text/javascript">
+
+
+
+  		function validate()
+  		{
+      var x=0;
+      var blood= document.forms['form']['blood'].value;
+  		var city= document.forms['form']['city'].value;
+  		var age= document.forms['form']['age'].value;
+  		var name= document.forms['form']['name'].value;
+  		var mobile= document.forms['form']['mobile'].value;
+  		if (age<18) 
+  		{
+  			window.alert("You are too young to donate");
+        x=x+1;
+  		}
+  		else if(age>100)
+  		{
+  			window.alert("You are too old to donate");
+        x=x+1;
+  		} 
+  		if(mobile>9999999999)
+  		{
+  			window.alert("Number should not exceed 10 characters");
+        x=x+1;
+  		} 
+  		else if(mobile<1000000000)
+  		{
+  			window.alert("Number should be atleast 10 characters");
+        x=x+1;
+  		}
+  		if(isNaN(name)==false)
+  		{
+  			window.alert("Name should only have alphabets");
+        x=x+1;
+  		} 
+  		if(isNaN(city)==false)
+  		{
+  			window.alert("City Name should only have alphabets");
+        x=x+1;
+  		} 
+      if(isNaN(blood)==false)
+      {
+        window.alert("Blood group shouldn't be a number");
+        x=x+1;
+      } 
+    		
+  		}
+  	</script>
+  	<a href="Blood.php"></a>
+
+  	<style>
+ 		.carousel-inner > .item > img,
+  		.carousel-inner > .item > a > 
+    img 
+    {
+    	width: 70%;
+    	margin: auto;
+    }
+    #contact{
+    	color: red;
+    }
+  </style>
+  
+</head>
+<body id="mainbody">
+	
+	<main>
+	<header>
+		<div id="logo"></div>
+		<nav>
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Donate">Donation Form</a></li>
+				<li><a href="#Contact">Contact</a></li>
+				<li><a href="User.php">Profile</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<section id="Home">			
+		<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="Doctor1.jpg" alt="Blood1" width="460" height="345">
+        <div class="carousel-caption">
+          <h1>Please Donate 3 times a year</h1>
+          <h3>You can save many Lives, of which, one day might be yours.</h3>  
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="Doctor2.jpg" alt="Blood2" width="460" height="345">
+        <div class="carousel-caption">
+          <h1>Donation takes only an hour of your time</h1>
+          <h3>An hour of your time might give someone the opportunity to live a whole life</h3>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="Doctor3.jpg" alt="Blood3" width="460" height="345">
+        <div class="carousel-caption">
+           <h1>Please Donate 3 times a year</h1>
+          <h3>You can save many Lives, of which, one day might be yours.</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="Doctor4.jpg" alt="Blood4" width="460" height="345">
+        <div class="carousel-caption">
+          <h1>Donation takes only an hour of your time</h1>
+          <h3>An hour of your time might give someone the opportunity to live a whole life</h3>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+	</section>
+
+
+	<section id="About">
+<span class ="text1">LEARN ABOUT US</span><br><br>
+<span class="text2"></span><br><br><br><br>
+
+
+<section id="symbol">
+	<div id="s1">
+		<div class="simg1">
+			<span class="text3">Benefits</span>
+			<span class="text4">Lorem ipsum dolor sit amet, consectetur adipisicing  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "</span>
+		</div>
+	</div>
+
+	<div id="s2">
+		<div class="simg2">
+			
+			<span class="text3">Effects</span>
+			<span class="text4">Lorem ipsum dolor sit amet, consectetur adipisicing  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
+		</div>
+
+
+	</div>
+	<div id="s3">						
+			<div class="simg3">
+			<span class="text3">Drawbacks</span>
+			<span class="text4">Lorem ipsum dolor sit amet, consectetur adipisicing  elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
+
+			</div>
+	</div>
+	<div id="infobutton">
+		<form action="https://www.healthline.com/health/benefits-of-donating-blood#what-to-know">
+			<button>More</button>
+		</form>
+	</div>
+</section>
+</section>
+
+	
+
+
+	<section id="Donate">
+		<div id="dona">Donation Details</div><br><br>
+		<form name="form" action="blood.php" onsubmit="validate()" method="POST">
+			<div id="donatetext">
+			Enter Name:     <input type="text" name="name" id="na" placeholder="Name" required><br><br><br>
+		    Enter Gender:   <input type="radio" name="gender" id="ge" value="Male" required>Male
+	    					<input type="radio" name="gender" id="ge" value="Female">Female
+	    					<input type="radio" name="gender" id="ge" value="Other">Other<br><br><br>
+	    	Enter Age:	<input type="number" name="age" id="age" placeholder="Age" required><br><br><br>
+        Enter Blood Group: <input type="text" name="blood" id="blood" placeholder="Blood Group" required><br><br><br>
+	    	Enter Mobile No.:	<input type="number" name="mobile" id="num" placeholder="Mobile number" maxlength="10" minlength="10" required><br><br><br>
+	    	Enter Email ID:		<input type="Email" name="email" id="email" placeholder="Example1234@email.com" required><br><br><br>
+	    	Enter Address:   <input type="text" name="address" placeholder="Address" required><br><br><br>
+	    	Enter City Name: <input type="text" name="city" placeholder="City" required><br><br><br>
+	    	Enter Date: </div><input type="date" required>
+	    	<button type="submit" id="button3">Submit</button>
+    	</form>
+
+	
+	</section>
+
+
+	<section id="Contact">
+		<div id="map">
+		<div id="add">
+		<h3>Contact Us</h3>
+		<h4>Email: Workforblood@gmail.com</h4>
+		<h4>All rights reserved</h4>
+		<h4>Mumbai</h4>
+</div>
+</div>
+
+	</section>
+</main>
+</body>
+</html>

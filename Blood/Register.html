@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="design.css">
+  <link rel="stylesheet" type="text/css" href="register.php">
+	<script type="text/javascript">
+
+  		function validate()
+  		{
+  		var x=0;
+      var blood=document.forms['form']['blood'].value;
+  		var password=document.forms['form']['password'].value;
+  		var confirm=document.forms['form']['confirm'].value;
+  		var city= document.forms['form']['city'].value;
+  		var age= document.forms['form']['age'].value;
+  		var name= document.forms['form']['name'].value;
+  		var mobile= document.forms['form']['mobile'].value;
+  		if (age<18) 
+  		{
+  			window.alert("You are too young to donate");
+  			x=x+1;
+  		}
+  		else if(age>100)
+  		{
+  			window.alert("You are too old to donate");
+  			x=x+1;
+  		} 
+  		if(mobile>9999999999)
+  		{
+  			window.alert("Number should not exceed 10 characters");
+  			x=x+1;
+  		} 
+  		else if(mobile<1000000000)
+  		{
+  			window.alert("Number should be atleast 10 characters");
+  			x=x+1;
+  		}
+  		if(isNaN(name)==false)
+  		{
+  			window.alert("Name should only have alphabets");
+  			x=x+1;
+  		} 
+  		if(isNaN(city)==false)
+  		{
+  			window.alert("City Name should only have alphabets");
+  			x=x+1;
+  		} 
+  		if(password!==confirm)
+  		{
+  			window.alert("The two passwords donot match");
+  			x=x+1;
+  		}
+      if(isNaN(blood)==false)
+      {
+        window.alert("Blood group shouldn't be a number");
+        x=x+1;
+      }    		
+  		}
+  	</script>
+
+</head>
+<body id="regbody">
+	<div id=registerlogo>
+		
+	</div>
+	
+	<div id="registertext1">
+		<div id="registerbackground">
+		Register 
+	
+
+	<div id="registertext2">
+
+
+	<section id="Member">
+		<form action="register.php" onsubmit="validate()" name="form" method="POST">
+			<div id="registerbackground">
+			Enter Name:     <input type="text" name="name" id="na" placeholder="Name" required><br><br><br>
+		    Enter Gender:   <input type="radio"name="gender" value="Male" required>Male
+	    					<input type="radio"name="gender" value="Female" >Female
+	    					<input type="radio"name="gender" value="Other">Other<br><br><br>
+	    	Enter Age:	<input type="text" name="age" placeholder="Age" required><br><br><br>
+        Enter Blood Group: <input type="text" name="blood" placeholder="Blood Group" required><br><br><br>
+	    	Enter Mobile No.:	<input type="text" name="mobile" placeholder="Mobile number" maxlength="10" minlength="10" required><br><br><br>
+	    	Enter Email ID:		<input type="Email" name="email" placeholder="Example1234@email.com" required><br><br><br>
+	    	Enter Address:   <input type="text" name="address" placeholder="Address" required><br><br><br>
+	    	Enter City Name: <input type="text" name="city" placeholder="City" required><br><br><br>
+	    	Enter Username: <input type="text" name="username" placeholder="Username" required><br><br><br>
+	    	Enter Password: <input type="password" name="password" placeholder="Password" required><br><br><br>
+	    	Confirm Password: <input type="password" name="confirm" placeholder="Confirm" required><br><br><br>
+
+	    	<button type="submit" id="button3">Submit</button>
+    	</form>
+    </section>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
